@@ -28,24 +28,16 @@ ll cp(int st , int ed) //closest pair function
 	if(ed-st==1) return dist(v[st],v[ed]);
 	int mid = (st+ed)>>1;
 	ll d = min(cp(st,mid),cp(mid+1,ed));
-	//cout << d << "\n";
 	int k=0;
 	for(int i=st;i<=ed;i++)
 	{
 		if(expon(v[mid].x-v[i].x)<=d) aux[k++] = v[i];
 	}
 	sort(aux,aux+k,pcompare);
-	//cout << d << "\n";
-	//cout << "PASS\n";
 	for(int i=0;i<k;i++)
 	{
-		//cout << "PASS\n";
-		//printf("%d %d %lf %lf\n",aux[i+1].y,aux[i].y,expon(aux[i+1].y-aux[i].y),d);
 		for(int j=i+1 ; j<k && (expon(aux[j].y-aux[i].y)<d) ; j++)
 		{	
-			//cout << dist(aux[i],aux[j]) << "\n";
-			//printf("%d %d\n",aux[i].x,aux[i].y);
-			//printf("%d %d\n",aux[j].x,aux[j].y);
 			d = min( d , dist(aux[i],aux[j]) );
 		}
 	}
