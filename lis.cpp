@@ -16,7 +16,7 @@ int main()
 		int l=n;
 		while(f<=l){ //f=first l=last
 			int m=(f+l)/2;
-			if( lis[m]==-1000000 || ( lis[m]!=-1000000 && tree[i]<=lis[m]) ) {
+			if( lis[m]==-1000000 || ( lis[m]!=-1000000 && tree[i]<lis[m]) ) {
 				l=m-1;
 			}
 			else f=m+1;
