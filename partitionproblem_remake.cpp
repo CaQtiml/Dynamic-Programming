@@ -13,7 +13,6 @@ int main()
 		cin >> arr[i];
 		sum+=arr[i];
 	}
-	//sum/=2;
 	bool dp[n+5][(sum/2)+5];
 	for(int i=0;i<=n;i++)
 		for(int j=0;j<=sum;j++)
