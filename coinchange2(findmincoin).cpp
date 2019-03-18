@@ -8,22 +8,6 @@ int ans[3][12];
 //pair<int,int> p[11];
 #define f first
 #define s second
-void cntcoin(int cash , int who , int n)
-{
-	while(cash!=0)
-	{
-		int r = par[cash];
-		for(int i=1;i<=n;i++)
-		{
-			if(cash-c[i]==r)
-			{
-				ans[who][i]++;
-				cash=r;
-				break;
-			}
-		}
-	}
-}
 int main()
 {
 
